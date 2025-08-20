@@ -17,7 +17,7 @@ st.caption("Enter your qualitative feedback to see a predicted rating.")
 
 # ================== INPUT FORM LOGIC ==================
 def get_inputs():
-    text = st.number_area("Below you should input your text feedback.",value=4.01)
+    text = st.text_area("Below you should input your text feedback.",value="Input Here")
     return text
 
 # ================== INPUT PARAMETERS ==================
@@ -27,7 +27,7 @@ with st.expander("⚙️ Input Parameters", expanded=True):
 # ============= MODEL =============
 def run_model(text):
 
-    avg_rating_xgb = text
+    avg_rating_xgb = len(text)
     is_above_4_2 = avg_rating_xgb > 4.2
 
     return avg_rating_xgb, is_above_4_2
