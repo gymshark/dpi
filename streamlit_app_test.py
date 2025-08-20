@@ -42,7 +42,7 @@ if "is_above_4_2" not in st.session_state:
 if st.button("🚀 Run Model"):
     with st.spinner("Running Model... please wait ⏳"):
         avg_rating_xgb, is_above_4_2 = run_model(
-            text
+            text_input
         )
 
     st.success("✅ Model run complete!")
