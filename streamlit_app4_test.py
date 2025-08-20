@@ -7,18 +7,6 @@ Original file is located at
     https://colab.research.google.com/embedded/projects/gymshark-rollup-5712/locations/us-central1/repositories/d85f2dfb-8f0d-4237-b819-c166b69b5143
 """
 
-import pandas as pd
-from sentence_transformers import SentenceTransformer
-from xgboost import XGBClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, accuracy_score
-from sklearn.preprocessing import StandardScaler
-from textblob import TextBlob
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.metrics import confusion_matrix
-import seaborn as sns
 import streamlit as st
 
 # ================== STREAMLIT PAGE CONFIG ==================
