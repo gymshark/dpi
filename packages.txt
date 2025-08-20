@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+requests
+matplotlib
+sentence-transformers
+xgboost
+scikit-learn
+pandas
+protobuf==3.20.*
