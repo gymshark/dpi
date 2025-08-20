@@ -27,7 +27,7 @@ with st.expander("⚙️ Input Parameters", expanded=True):
 # ============= MODEL =============
 def run_model(text):
 
-    avg_rating_xgb = 4.04
+    avg_rating_xgb = text
     is_above_4_2 = avg_rating_xgb > 4.2
 
     return avg_rating_xgb, is_above_4_2
@@ -41,7 +41,9 @@ if "is_above_4_2" not in st.session_state:
 # ================== RUN BUTTON ==================
 if st.button("🚀 Run Model"):
     with st.spinner("Running Model... please wait ⏳"):
-        avg_rating_xgb, is_above_4_2 = run_model(text)
+        avg_rating_xgb, is_above_4_2 = run_model(
+            text
+        )
 
     st.success("✅ Model run complete!")
 
