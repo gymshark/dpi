@@ -164,7 +164,7 @@ cols = st.columns([1,1,2])
 #             embedder, scaler, xgb, logreg, meta_clf, metadata = load_artifacts()
 #         st.success("Artifacts refreshed.")
 
-with cols[1]:
+with cols[0]:
     run_infer = st.button("🚀 Predict")
 
 if run_infer:
