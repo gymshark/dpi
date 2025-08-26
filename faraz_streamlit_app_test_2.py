@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/embedded/projects/gymshark-rollup-5712/locations/us-central1/repositories/0ce77d54-ad13-4375-a690-3092f09b81b9
 """
 
-!pip install sentence-transformers xgboost scikit-learn pandas protobuf==3.20.* streamlit
+# !pip install sentence-transformers xgboost scikit-learn pandas protobuf==3.20.* streamlit
 
 import os, joblib, numpy as np, pandas as pd, streamlit as st
 from sentence_transformers import SentenceTransformer
