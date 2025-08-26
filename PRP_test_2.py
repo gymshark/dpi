@@ -151,18 +151,18 @@ with st.expander("⚙️ Input Parameters", expanded=True):
     text_input = st.text_area("Paste a product review:", value="Waistband stayed up during squats; fabric felt durable.")
 
 cols = st.columns([1,1,2])
-with cols[0]:
-    if st.button("🔄 Refresh / Retrain Artifacts"):
-        # Force retrain and clear cache
-        if os.path.exists(ARTIFACT_DIR):
-            for f in [META_PATH, XGB_PATH, LR_PATH, SCALER_PATH, META_CLF_PATH]:
-                if os.path.exists(f):
-                    os.remove(f)
-        st.cache_resource.clear()  # clear model cache
-        with st.spinner("Training and saving artifacts…"):
-            # load_artifacts() will detect missing files and call train_and_save
-            embedder, scaler, xgb, logreg, meta_clf, metadata = load_artifacts()
-        st.success("Artifacts refreshed.")
+# with cols[0]:
+#     if st.button("🔄 Refresh / Retrain Artifacts"):
+#         # Force retrain and clear cache
+#         if os.path.exists(ARTIFACT_DIR):
+#             for f in [META_PATH, XGB_PATH, LR_PATH, SCALER_PATH, META_CLF_PATH]:
+#                 if os.path.exists(f):
+#                     os.remove(f)
+#         st.cache_resource.clear()  # clear model cache
+#         with st.spinner("Training and saving artifacts…"):
+#             # load_artifacts() will detect missing files and call train_and_save
+#             embedder, scaler, xgb, logreg, meta_clf, metadata = load_artifacts()
+#         st.success("Artifacts refreshed.")
 
 with cols[1]:
     run_infer = st.button("🚀 Predict")
