@@ -1,14 +1,3 @@
-streamlit
-pandas
-numpy
-requests
-matplotlib
-sentence-transformers
-xgboost
-scikit-learn
-pandas
-protobuf==3.20.*
-
 # --- Core app/UI ---
 streamlit>=1.29
 
@@ -27,3 +16,4 @@ sentence-transformers>=2.6
 
 # --- Simple sentiment ---
 textblob>=0.17
+
