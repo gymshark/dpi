@@ -8,3 +8,22 @@ xgboost
 scikit-learn
 pandas
 protobuf==3.20.*
+
+# --- Core app/UI ---
+streamlit>=1.29
+
+# --- Data & utils ---
+numpy>=1.24
+pandas>=2.0
+joblib>=1.3
+
+# --- ML stack ---
+scikit-learn>=1.3
+xgboost>=1.7
+
+# --- NLP / embeddings ---
+sentence-transformers>=2.6
+# sentence-transformers will pull in transformers, tokenizers, and torch
+
+# --- Simple sentiment ---
+textblob>=0.17
