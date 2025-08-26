@@ -173,6 +173,15 @@ if run_infer:
     else:
         stars, probs = predict_stars(text_input.strip())
         st.success(f"Predicted rating: **{stars}★**")
-        st.write("Class probabilities (1★→5★):", np.round(probs, 3))
+
+        # Format class probabilities into a table
+        probs = np.asarray(probs).ravel()  # ensure 1D
+        df_probs = pd.DataFrame({
+            "Likelihood to be": [f"{i}★" for i in range(1, 6)],
+            "Probability": [f"{p*100:.1f}%" for p in probs]
+        })
+
+        st.dataframe(df_probs, use_container_width=True, hide_index=True)
+
 
 st.caption("Tip: Artifacts are cached in memory via `@st.cache_resource`, so the app won’t retrain on each rerun.")
