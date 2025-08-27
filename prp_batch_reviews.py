@@ -30,8 +30,8 @@ SCALER_PATH    = f"{ARTIFACT_DIR}/sent_scaler.joblib"
 META_CLF_PATH  = f"{ARTIFACT_DIR}/meta_model.joblib"
 
 # ================== STREAMLIT PAGE ==================
-st.set_page_config(page_title="Product Quality Predictor", layout="wide")
-st.title("Product Quality Predictor")
+st.set_page_config(page_title="QML Rating Predictor", layout="wide")
+st.title("QML Rating Predictor")
 st.subheader("Check if your product is up to standard")
 st.caption("Paste multiple qualitative reviews – one per line – or a Python/JSON list. We'll predict a star rating for each.")
 
@@ -154,9 +154,9 @@ if run_infer:
     s1, s2, s3 = st.columns([1, 1, 2])
     with s1:
         st.metric("Mean expected rating", f"{mean_expected:.2f}★")
-    with s2:
-        st.write("**Predicted distribution**")
-        st.write({f"{k}★": int(v) for k, v in star_counts.items()})
+    # with s2:
+    #     st.write("**Predicted distribution**")
+    #     st.write({f"{k}★": int(v) for k, v in star_counts.items()})
 
     st.dataframe(df_out, use_container_width=True, hide_index=True)
 
